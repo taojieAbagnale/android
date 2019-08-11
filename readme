@@ -1,0 +1,1 @@
+编译加入g++  *.cpp -o -lpthread
