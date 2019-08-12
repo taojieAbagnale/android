@@ -22,7 +22,9 @@ class Bird : public IShape, public IAction
 public:
     Bird();
     ~Bird();
+public:
 static  void* vivorun(void* data);
+public:
 static Vivodata readfile();
     // IAction interface
 public:

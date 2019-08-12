@@ -6,7 +6,8 @@
 #include <iostream>
 using namespace taojie::luyao;
 Bird::Bird()
-{   
+{  
+    readfile();
     Vivodata vivodata;
     vivodata.heng=5;
     std::cout<<"构造函数"<<std::endl;
@@ -39,16 +40,10 @@ void Bird::run()
 {
     std::cout<<"小鸟飞呀飞呀"<<std::endl;
 }
-Vivodata readfile(){
-        Vivodata vivodata;
-
-        int file=open("taojiegg",O_RDWR);
-        std::cout<<file<<std::endl;
-        char buf[30];
-        int n=read(file,buf,30);
-        std::cout<<buf;
-        close(file);
-        return vivodata;
+Vivodata Bird::readfile(){
+	std::cout<<"readfil static method ";
+	Vivodata vivodata;
+	return vivodata;
 }
 void* Bird::vivorun(void* data){
     	int k=5;
